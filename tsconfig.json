@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "declaration": true,
+      "module": "commonjs",
+      "target": "es2019",
+      "lib": ["es2019", "es2017", "dom"],
+      "jsx": "react"
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["./src/*.test.ts", "dist", "node_modules"]
+  }
+  
