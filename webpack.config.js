@@ -42,6 +42,10 @@ const baseConfig = (mode, target) => {
     },
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
+
+      alias: {
+        react: path.resolve("node_modules/react"),
+      },
     },
     output: {
       filename: "[name].js",
