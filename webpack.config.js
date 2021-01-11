@@ -45,7 +45,7 @@ const baseConfig = (mode, target) => {
     },
     output: {
       filename: "[name].js",
-      path: path.join(__dirname, "example"),
+      path: path.join(__dirname, "dist"),
       pathinfo: false,
     },
     optimization: {
