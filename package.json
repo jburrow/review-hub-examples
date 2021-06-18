@@ -1,6 +1,6 @@
 {
   "name": "review-hub-examples",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ReactJs application, components and reducers for a web-based code review tool",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,6 +22,8 @@
     "url": "https://github.com/jburrow/review-hub-examples.git"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@monaco-editor/react": "^4.0.9",
     "file-saver": "^2.0.5",
     "jszip": "^3.5.0",
@@ -32,16 +34,13 @@
     "react-dom": "^17.0.1",
     "react-grid-layout": "^1.2.0",
     "react-with-styles": "^4.1.0",
-    "review-hub": "0.0.22",
+    "review-hub": "^0.0.23",
     "stream": "0.0.2",
     "zip-js": "0.0.2"
   },
   "devDependencies": {
     "@babel/runtime": "^7.12.5",
     "@babel/types": "^7.12.12",
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@rooks/use-window-size": "^4.8.0",
     "@types/jest": "^26.0.19",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
