@@ -22,6 +22,11 @@ const baseConfig = (mode, target) => {
     module: {
       rules: [
         {
+          test: /\.js$/,
+          enforce: "pre",
+          use: ["source-map-loader"],
+        },
+        {
           test: /\.tsx?$/,
           exclude: [/node_modules/],
           loader: "ts-loader",
@@ -61,8 +66,9 @@ const baseConfig = (mode, target) => {
   };
 };
 
-module.exports = ({ WEBPACK_SERVE }, argv) => {
-  const mode = WEBPACK_SERVE ? "development" : "production";
+module.exports = (env, argv) => {
+  console.log(env);
+  const mode = "development"; //WEBPACK_SERVE ? "development" : "production";
   return {
     ...baseConfig(mode, "ES2017"),
   };
