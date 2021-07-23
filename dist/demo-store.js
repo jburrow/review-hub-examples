@@ -3,18 +3,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.createFakeMainStore = exports.demoStore = void 0;
 const review_hub_1 = require("review-hub");
 const loadVersionControlStore = () => {
+    const revision = "0";
     const events = [
         {
             fullPath: "/script1.txt",
             text: "function version(){ return 's1.1'}",
             type: "edit",
-            revision: 0,
+            revision,
         },
         {
             fullPath: "/script3.py",
             text: "function version(){ return 's3.1'}",
             type: "edit",
-            revision: 0,
+            revision,
         },
     ];
     const store = review_hub_1.reduceVersionControl([
@@ -33,13 +34,13 @@ const loadVersionControlStore = () => {
                     fullPath: "/script1.txt",
                     text: "function version(){ return 's1.2'}",
                     type: "edit",
-                    revision: 0,
+                    revision,
                 },
                 {
                     fullPath: "/script2.py",
                     text: "function version(){ return 's2.1'}",
                     type: "edit",
-                    revision: 0,
+                    revision,
                 },
             ],
         },
@@ -52,7 +53,7 @@ const loadVersionControlStore = () => {
                     fullPath: "/script1.txt",
                     text: "function version(){ return 's1.3'}",
                     type: "edit",
-                    revision: 0,
+                    revision,
                 },
             ],
         },
@@ -73,7 +74,7 @@ const loadVersionControlStore = () => {
                             id: "1",
                         },
                     ],
-                    revision: 0,
+                    revision,
                     type: "comment",
                 },
             ],
@@ -110,7 +111,7 @@ function createFakeMainStore(files) {
             .map(([fn, _]) => ({
             type: "edit",
             fullPath: fn,
-            revision: 1,
+            revision: "1",
             text: `i am main branch ${new Date().toISOString()}`,
         })),
     });

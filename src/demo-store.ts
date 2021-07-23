@@ -10,19 +10,21 @@ import {
 } from "review-hub";
 
 const loadVersionControlStore = (): VersionControlState => {
+  const revision = "0";
+
   const events: FileEvents[] = [
     {
       fullPath: "/script1.txt",
       text: "function version(){ return 's1.1'}",
       type: "edit",
-      revision: 0,
+      revision,
     },
 
     {
       fullPath: "/script3.py",
       text: "function version(){ return 's3.1'}",
       type: "edit",
-      revision: 0,
+      revision,
     },
   ];
 
@@ -42,13 +44,13 @@ const loadVersionControlStore = (): VersionControlState => {
           fullPath: "/script1.txt",
           text: "function version(){ return 's1.2'}",
           type: "edit",
-          revision: 0,
+          revision,
         },
         {
           fullPath: "/script2.py",
           text: "function version(){ return 's2.1'}",
           type: "edit",
-          revision: 0,
+          revision,
         },
       ],
     },
@@ -61,7 +63,7 @@ const loadVersionControlStore = (): VersionControlState => {
           fullPath: "/script1.txt",
           text: "function version(){ return 's1.3'}",
           type: "edit",
-          revision: 0,
+          revision,
         },
       ],
     },
@@ -82,7 +84,7 @@ const loadVersionControlStore = (): VersionControlState => {
               id: "1",
             },
           ],
-          revision: 0,
+          revision,
           type: "comment",
         },
       ],
@@ -122,7 +124,7 @@ export function createFakeMainStore(files: Files) {
       .map(([fn, _]) => ({
         type: "edit",
         fullPath: fn,
-        revision: 1,
+        revision: "1",
         text: `i am main branch ${new Date().toISOString()}`,
       })),
   });
